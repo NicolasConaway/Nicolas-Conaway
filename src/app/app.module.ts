@@ -9,6 +9,8 @@ import { FooterComponent } from './Components/layout/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LandingComponent } from './Components/pages/landing/landing.component';
 import { AboutComponent } from './Components/pages/about/about.component';
+import { ProjectsComponent } from './Components/pages/projects/projects.component';
+import { ContactComponent } from './Components/pages/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { AboutComponent } from './Components/pages/about/about.component';
     BodyComponent,
     FooterComponent,
     LandingComponent,
-    AboutComponent
+    AboutComponent,
+    ProjectsComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
