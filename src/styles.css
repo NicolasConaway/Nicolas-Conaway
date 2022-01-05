@@ -84,7 +84,8 @@ body {
 
 /* About Page Styles */
 .about-page-container {
-    height: fit-content;
+    max-height: fit-content;
+    min-height: 100vh;
     background-color: rgb(39, 39, 39);
     color: white;
     padding: 1rem;
