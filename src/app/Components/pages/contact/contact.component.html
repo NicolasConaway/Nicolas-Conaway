@@ -1,4 +1,23 @@
 <div id="contact_page" class="contact-page-container">
-    <p>contact works!</p>
+    <h2 id="contact_title">Contact</h2>
+    
+    <form id="contact_form">
+        <div id="name_field" class="contact-field">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" placeholder="John Doe" />
+        </div>
+
+        <div id="email_field" class="contact-field">
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email" placeholder="example@gmail.com" />
+        </div>
+
+        <div id="message_field" class="contact-field">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Type your message here"></textarea>
+        </div>
+
+        <button type="submit" id="contact_submit_btn" (click)="onSubmit($event)">Submit</button>
+    </form>
  </div>
  
