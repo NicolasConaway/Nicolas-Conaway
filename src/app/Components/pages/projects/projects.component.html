@@ -1,3 +1,20 @@
 <div id="projects_page" class="projects-page-container">
-   <p>Projects works!</p>
+   <h2 id="projects_title">Projects</h2>
+
+   <div id="projects_list_container">
+      <span class="placeholder-project" *ngFor="let project of projectList" (click)="projectOptions(project)">
+         <p>{{ project.title }}</p>
+         <div class="project-options" *ngIf="project.isActive" [@simpleFadeAnimation]="'in'">
+            <a href="{{project.github}}" target="_blank"
+            rel="noopener noreferrer">
+               <button>GitHub</button>
+            </a>
+            <span class="option-divider"></span>
+            <a href="#" target="_blank"
+               rel="noopener noreferrer">
+               <button>Website</button>
+            </a>
+         </div>
+      </span>
+   </div>
 </div>

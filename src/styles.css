@@ -12,6 +12,9 @@ body {
     height: 100vh;
     font-family: 'Playfair Display', serif;
 }
+button {
+    font-family: 'Playfair Display', serif;
+}
 
 .portfolio-container {
     height: 100%;
@@ -29,7 +32,9 @@ body {
     z-index: 10;
     padding-top: 2rem;
 }
-.header-link {
+.header-link,
+#resume_button,
+.project-options a{
     color: rgb(39, 39, 39);
     text-decoration: none;
 }
@@ -104,13 +109,13 @@ body {
     border-radius: 40%;
 }
 #about_me_description {
-    margin-bottom: 1rem;
+    margin-bottom: .9rem;
     text-align: center;
     font-size: 1rem;
     line-height: 1.4rem;
 }
 #about_me_description p {
-    margin-bottom: .5rem;
+    margin-bottom: .6rem;
 }
 .skills-container {
     width: 100%;
@@ -141,22 +146,91 @@ body {
     font-size: 1rem;
     line-height: 1.4rem;
 }
-#resume_download {
+#resume_button button{
     border: none;
     background-color: white;
     padding: .5rem 1rem;
     font-size: 1rem;
     margin-top: 1rem;
+    border-radius: 3rem;
+    cursor: pointer;
 }
 
 /* Projects Page Styles */
 .projects-page-container {
-    height: 100vh;
+    max-height: fit-content;
+    min-height: 100vh;
+    padding: 1rem;
+}
+#projects_title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+#projects_list_container {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.placeholder-project {
+    height: 12rem;
+    width: 90%;
+    background-color: rgb(39, 39, 39);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    position: relative;
+    border: 2px solid black;
+    cursor: pointer;
+}
+.placeholder-project:nth-child(4) {
+    margin: 0;
+}
+.project-options {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0 1rem 1rem 0;
+}
+.project-options a {
+    width: 100%;
+    height: 49%;
+    display: flex;
+    align-items: center;
+}
+.project-options a button {
+    width: inherit;
+    height: 100%;
+    background-color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 0 1rem 1rem 0;
+}
+.project-options a button:hover {
+    background-color: rgb(241, 241, 241);
+}
+.option-divider {
+    width: 95%;
+    height: 1%;
+    background-color: rgb(39, 39, 39);
+    border-radius: 1rem;
 }
 
 /* Contact Page Styles */
 .contact-page-container {
-    height: 100vh;
+    max-height: fit-content;
+    min-height: 100vh;
+    padding: 1rem;
     background-color: rgb(39, 39, 39);
     color: white;
 }
