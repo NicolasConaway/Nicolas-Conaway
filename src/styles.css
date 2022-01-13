@@ -186,6 +186,7 @@ button {
     position: relative;
     border: 2px solid black;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 .placeholder-project:nth-child(4) {
     margin: 0;
