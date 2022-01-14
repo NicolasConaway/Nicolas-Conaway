@@ -40,6 +40,9 @@ textarea {
     color: rgb(39, 39, 39);
     text-decoration: none;
 }
+.header-link {
+    padding: 1rem;
+}
 .header-link:hover {
     color: rgb(95, 95, 95);
     cursor: pointer;
@@ -76,6 +79,7 @@ textarea {
     background-color: transparent;
     animation: fadeinHeaderLink 4.5s;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 @keyframes fadein {
@@ -91,8 +95,7 @@ textarea {
 /* About Page Styles */
 .about-page-container,
 .contact-page-container {
-    max-height: fit-content;
-    min-height: 100vh;
+    height: fit-content;
     background-color: rgb(39, 39, 39);
     color: white;
     padding: 1rem;
@@ -149,27 +152,15 @@ textarea {
     font-size: 1rem;
     line-height: 1.4rem;
 }
-#resume_button {
-    -webkit-tap-highlight-color: transparent;
-}
-#resume_button button {
-    border: none;
-    background-color: white;
-    padding: .5rem 1rem;
-    font-size: 1rem;
-    margin-top: 1rem;
-    border-radius: 3rem;
-    cursor: pointer;
-}
-#resume_button button:hover {
-    background-color: rgb(241, 241, 241);
-}
 
 /* Projects Page Styles */
 .projects-page-container {
-    max-height: fit-content;
-    min-height: 100vh;
+    height: fit-content;
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 #projects_title {
     text-align: center;
@@ -181,6 +172,7 @@ textarea {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 .placeholder-project {
     height: 12rem;
@@ -241,8 +233,6 @@ textarea {
 /* Contact Page Styles */
 .contact-page-container {
     height: fit-content;
-    max-height: unset;
-    min-height: unset;
 }
 #email_me {
     border: 0.2rem solid white;
@@ -274,7 +264,7 @@ textarea {
 }
 #extra_links {
     height: fit-content;
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -291,4 +281,78 @@ textarea {
     padding: .5rem 0;
     background-color: rgb(39, 39, 39);
     color: white;
+}
+
+@media (min-width: 1280px) {
+    p, ul {
+        font-size: 1.1rem;
+    }
+    h2 {
+        font-size: 2.3rem;
+    }
+    h3 {
+        font-size: 1.2rem;
+    }
+    /* Header */
+    .header-link {
+        font-size: 1.5rem;
+    }
+
+    /* Landing */
+    .landing-page-text h1 {
+        font-size: 2.5rem;
+    }
+    .landing-page-text p {
+        font-size: 1.5rem;
+    }
+    #landing-page-arrow {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+
+    /* About Me */
+    #nicolas_conaway_img {
+        width: 15rem;
+        height: 15rem;
+    }
+    #about_me_description {
+        width: 70%;
+    }
+    .skills-container {
+        width: 40%;
+    }
+
+    /* Projects */
+    #projects_list_container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 90%;
+        justify-content: space-between;
+    }
+    .placeholder-project {
+        width: 30rem;
+        height: 15rem;
+    }
+    .placeholder-project:nth-child(4) {
+        margin-bottom: 2rem;
+    }
+
+    /* Contact */
+    .contact-page-container {
+        padding-bottom: 2rem;
+    }
+    #email_me {
+        padding: 2.5rem 1rem;
+    }
+    #email_me p {
+        margin-bottom: 1.8rem;
+    }
+    #extra_links {
+        width: 35%
+    }
+
+    /* Footer */
+    .portfolio-footer {
+        padding: 1rem 0;
+    }
 }
