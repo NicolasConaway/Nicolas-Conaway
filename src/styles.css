@@ -239,46 +239,56 @@ textarea {
 }
 
 /* Contact Page Styles */
-#contact_form {
-    background-color: white;
-    width: 80%;
-    box-shadow: 0.2rem 0.2rem 1rem rgba(235, 235, 235, 0.589);
-    margin: 3rem;
-    padding: 1rem;
-
+.contact-page-container {
+    height: fit-content;
+    max-height: unset;
+    min-height: unset;
 }
-.contact-field {
+#email_me {
+    border: 0.2rem solid white;
+    border-radius: 0.3rem;
+    padding: 2rem 1rem;
+    margin: 1rem 0;
+    width: 80%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+}
+#email_me p {
+    text-align: center;
     margin-bottom: 1rem;
+}
+#email_link,
+#extra_links a {
+    text-decoration: none;
     color: rgb(39, 39, 39);
-}
-.contact-field label {
-    font-size: 1.1rem;
-    margin-bottom: .2rem;
-}
-.contact-field input,
-.contact-field textarea {
-    width: 95%;
-    height: 1.1rem;
-    padding: .3rem 0;
-    font-size: .9rem;
-}
-.contact-field textarea {
-    height: 5rem;
-    resize: none;
-}
-#contact_submit_btn {
-    border: none;
-    background-color: rgb(39, 39, 39);
-    color: white;
-    padding: .5rem 1rem;
-    font-size: 1rem;
-    cursor: pointer;
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
     -webkit-tap-highlight-color: transparent;
 }
-#contact_submit_btn:hover {
-    background-color: rgb(82, 82, 82);
+#email_link:hover,
+#extra_links a:hover {
+    background-color: rgb(241, 241, 241);
+}
+#extra_links {
+    height: fit-content;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Footer Styles */
+.portfolio-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: .9rem;
+    padding: .5rem 0;
+    background-color: rgb(39, 39, 39);
+    color: white;
 }
